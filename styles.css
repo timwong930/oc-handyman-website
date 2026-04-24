@@ -66,8 +66,37 @@ main { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .hero-card { padding: 28px; }
 .hero-card ul { margin: 0; padding-left: 18px; color: var(--muted); }
+.featured-project { padding: 0; overflow: hidden; }
+.featured-project img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.feature-copy { padding: 22px; }
+.feature-copy h3 { margin: 0 0 10px; font-size: 1.35rem; line-height: 1.2; }
+.feature-copy p { margin: 0; color: var(--muted); }
 .section { padding: 34px 0; }
 .section-heading h2 { margin: 0; font-size: clamp(1.5rem, 2.4vw, 2.3rem); }
+.section-intro { margin: 12px 0 0; max-width: 68ch; color: var(--muted); }
+.photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+.photo-card {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.9);
+  box-shadow: var(--shadow);
+}
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.photo-card figcaption { padding: 18px; }
+.photo-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+.photo-card p { margin: 0; color: var(--muted); }
 .service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
 .service-card { padding: 20px; min-height: 120px; }
 .service-card h3 { margin: 0 0 8px; }
@@ -82,7 +111,7 @@ main { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; }
 .footer-links a { color: var(--muted); font-weight: 600; }
 @media (max-width: 860px) {
-  .hero, .service-grid, .two-col { grid-template-columns: 1fr; }
+  .hero, .service-grid, .two-col, .photo-grid { grid-template-columns: 1fr; }
   .site-header, .footer { flex-direction: column; align-items: flex-start; }
   .footer-links { justify-content: flex-start; }
 }
